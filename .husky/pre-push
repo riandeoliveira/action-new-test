@@ -1,6 +1,3 @@
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-
 echo "Select the version bump type:"
 echo "1) Major"
 echo "2) Minor"
