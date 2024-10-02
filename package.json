@@ -8,7 +8,8 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "bump": "bash bump-version.sh"
+    "bump": "bash bump-version.sh",
+    "prepare": "husky"
   },
   "dependencies": {
     "react": "^18.3.1",
