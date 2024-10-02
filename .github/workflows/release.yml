@@ -33,11 +33,18 @@ jobs:
           VERSION=$(jq -r .version package.json)
           echo "VERSION=${VERSION}" >> $GITHUB_ENV
 
+
+      - name: Get current date
+        id: get_date
+        run: |
+          DATE=$(date +"%B, %d, %Y")  # Formato: November, 12, 2023
+          echo "DATE=${DATE}" >> $GITHUB_ENV
+
       - name: Create Release
         id: create_release
         uses: softprops/action-gh-release@v1
         with:
           tag_name: v${{ env.VERSION }}
-          name: Release v${{ env.VERSION }}
+          name: v${{ env.VERSION }} (${{ env.DATE }})
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
