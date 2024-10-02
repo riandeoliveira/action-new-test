@@ -1,1 +1,1 @@
-bash ./bump-version.sh
+bash bump-version
