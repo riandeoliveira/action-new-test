@@ -8,13 +8,13 @@ read -p "Enter choice [1-3]: " choice
 
 case $choice in
     1) 
-        npm version major -m "Bump version to %s"
+        npm version major
         ;;
     2) 
-        npm version minor -m "Bump version to %s"
+        npm version minor
         ;;
     3) 
-        npm version patch -m "Bump version to %s"
+        npm version patch
         ;;
     *) 
         echo "Invalid choice. Aborting."
