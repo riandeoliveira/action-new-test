@@ -34,6 +34,5 @@ jobs:
           tag_name: v${{ github.run_number }}
           name: Release v${{ github.run_number }}
           body: "Nova versão criada a partir do commit ${{ github.sha }}"
-          files: ./dist/**
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
