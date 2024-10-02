@@ -19,17 +19,20 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '20'
+          node-version: '18'
 
       - name: Install dependencies
         run: npm install
 
+      - name: Configure Git
+        run: |
+          git config --global user.email "action@github.com"
+          git config --global user.name "GitHub Action"
+
       - name: Determine release type
         id: versioning
         run: |
-          # Aqui você pode definir a versão desejada
-          # Por exemplo, 'major', 'minor', 'patch'
-          echo "RELEASE_TYPE=major" >> $GITHUB_ENV  # Altere para o tipo desejado
+          echo "RELEASE_TYPE=major" >> $GITHUB_ENV  # Altere conforme necessário
 
       - name: Bump version
         run: |
